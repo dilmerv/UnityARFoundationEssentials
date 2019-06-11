@@ -10,9 +10,7 @@ public class ApplyRandomMaterial : MonoBehaviour
     private Button applyRandomMaterialButton;
 
     [SerializeField]
-    private ARFaceManager faceManager;
-
-    private MeshRenderer faceManagerFaceRenderer;
+    private Material faceMaterial;
     
     [SerializeField]
     private bool debugOn = false;
@@ -21,34 +19,14 @@ public class ApplyRandomMaterial : MonoBehaviour
 
     void Start()
     {
-        applyRandomMaterialButton.onClick.AddListener(GenerateRandomMaterial);
+        applyRandomMaterialButton.onClick.AddListener(GenerateRandomColorForMaterial);
         if(debugOn)
             debugGameObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
     }
 
-    void GenerateRandomMaterial()
+    private void GenerateRandomColorForMaterial()
     {
-        if(faceManagerFaceRenderer == null)
-        {
-            Debug.LogError("Face Manager did not get a Mesh Renderer");
-            return;
-        }
-
-        GenerateMaterial();
-    }
-
-    private void GenerateMaterial()
-    {
-        Material randomMaterial = new Material(Shader.Find("Standard"));
-        randomMaterial.name = $"Random_Material";
-        randomMaterial.color = GetRandomColor();
-        randomMaterial.EnableKeyword("_EMISSION");
-        randomMaterial.SetInt("_Cull", 0);
-        randomMaterial.SetColor("_EmissionColor", randomMaterial.color);
-        if(!debugOn)
-            faceManager.facePrefab.GetComponent<MeshRenderer>().material = randomMaterial;
-        else
-            faceManagerFaceRenderer = debugGameObject.GetComponent<MeshRenderer>();
+        faceMaterial.color = GetRandomColor();
     }
 
     static Color GetRandomColor() => Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);

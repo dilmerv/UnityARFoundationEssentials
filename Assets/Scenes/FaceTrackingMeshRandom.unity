@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyRandomMaterialButton: {fileID: 554899727}
-  faceManager: {fileID: 971030146}
+  faceMaterial: {fileID: 2100000, guid: 6c38d5a4fd9334fe489ed2a1be1ce1ae, type: 2}
   debugOn: 0
 --- !u!1 &554899725
 GameObject:
