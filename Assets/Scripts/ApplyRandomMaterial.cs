@@ -14,7 +14,6 @@ public class ApplyRandomMaterial : MonoBehaviour
     
     [SerializeField]
     private bool debugOn = false;
-
     private GameObject debugGameObject;
 
     void Start()
