@@ -57,54 +57,12 @@ public class TrackedImageInfoManager : MonoBehaviour
         m_TrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
     }
 
-    void UpdateInfo(ARTrackedImage trackedImage)
-    {
-        // Set canvas camera
-        var canvas = trackedImage.GetComponentInChildren<Canvas>();
-        canvas.worldCamera = worldSpaceCanvasCamera;
-
-        // Update information about the tracked image
-        var text = canvas.GetComponentInChildren<Text>();
-        text.text = string.Format(
-            "{0}\ntrackingState: {1}\nGUID: {2}\nReference size: {3} cm\nDetected size: {4} cm",
-            trackedImage.referenceImage.name,
-            trackedImage.trackingState,
-            trackedImage.referenceImage.guid,
-            trackedImage.referenceImage.size * 100f,
-            trackedImage.size * 100f);
-
-        var planeParentGo = trackedImage.transform.GetChild(0).gameObject;
-        var planeGo = planeParentGo.transform.GetChild(0).gameObject;
-
-        // Disable the visual plane if it is not being tracked
-        if (trackedImage.trackingState != TrackingState.None)
-        {
-            planeGo.SetActive(true);
-
-            // The image extents is only valid when the image is being tracked
-            trackedImage.transform.localScale = new Vector3(trackedImage.size.x, 1f, trackedImage.size.y);
-
-            // Set the texture
-            var material = planeGo.GetComponentInChildren<MeshRenderer>().material;
-            material.mainTexture = (trackedImage.referenceImage.texture == null) ? defaultTexture : trackedImage.referenceImage.texture;
-        }
-        else
-        {
-            planeGo.SetActive(false);
-        }
-    }
-
     void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
         foreach (var trackedImage in eventArgs.added)
         {
             // Give the initial image a reasonable default scale
-            trackedImage.transform.localScale = new Vector3(0.01f, 1f, 0.01f);
-
-            UpdateInfo(trackedImage);
+            trackedImage.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
         }
-
-        foreach (var trackedImage in eventArgs.updated)
-            UpdateInfo(trackedImage);
     }
 }
