@@ -26,7 +26,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Measurement.unity
     guid: 6a4fc9ab1d46745bc877d8a066d97406
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HangingTVs.unity
     guid: 142e1f114e88c41f895e0b7b1fbbd842
+  - enabled: 1
+    path: Assets/Scenes/CloudPointPlacement.unity
+    guid: c98556809e5ad4d8ca09f537cb67d462
   m_configObjects: {}
