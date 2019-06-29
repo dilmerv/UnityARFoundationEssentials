@@ -32,7 +32,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/CloudPointPlacement.unity
     guid: c98556809e5ad4d8ca09f537cb67d462
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DraggingAndDropping.unity
     guid: 178c7cc8fe57e445aa05f8b0374731f4
+  - enabled: 0
+    path: Assets/Scenes/Selection.unity
+    guid: b4f638280fab24a3bb56d2c962ac75e1
+  - enabled: 1
+    path: Assets/Scenes/SelectionAndOverlayText.unity
+    guid: bde958fead16c4a5c86127ed4ca1efe8
   m_configObjects: {}
