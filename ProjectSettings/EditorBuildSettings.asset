@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/FaceTrackingMeshRandom.unity
     guid: 72f1137d9218a4271bda4beab9e53658
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FaceTrackingMeshToggle.unity
     guid: b19491000e0764ce5bd2061a6eab0c17
   - enabled: 0
@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/DraggingAndDropping.unity
     guid: 178c7cc8fe57e445aa05f8b0374731f4
+  - enabled: 1
+    path: Assets/Scenes/DraggingAndDroppingMultiple.unity
+    guid: 01d048e9bb2184c3eb378a6f810c0751
   - enabled: 0
     path: Assets/Scenes/Selection.unity
     guid: b4f638280fab24a3bb56d2c962ac75e1
