@@ -29,11 +29,50 @@ public class PlacementWithMultipleDraggingDroppingController : MonoBehaviour
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     private PlacementObject lastSelectedObject;
+
+    [SerializeField]
+    private Button redButton, greenButton, blueButton;
+
+    private GameObject PlacedPrefab 
+    {
+        get 
+        {
+            return placedPrefab;
+        }
+        set 
+        {
+            placedPrefab = value;
+        }
+    }
+
+
     void Awake() 
     {
         arRaycastManager = GetComponent<ARRaycastManager>();
         dismissButton.onClick.AddListener(Dismiss);
+
+        if(redButton != null && greenButton != null && blueButton != null) 
+        {
+            redButton.onClick.AddListener(() => ChangePrefabSelection("ARRed"));
+            greenButton.onClick.AddListener(() => ChangePrefabSelection("ARGreen"));
+            blueButton.onClick.AddListener(() => ChangePrefabSelection("ARBlue"));
+        }
     }
+
+    private void ChangePrefabSelection(string name)
+    {
+        GameObject loadedGameObject = Resources.Load<GameObject>($"Prefabs/{name}");
+        if(loadedGameObject != null)
+        {
+            PlacedPrefab = loadedGameObject;
+            Debug.Log($"Game object with name {name} was loaded");
+        }
+        else 
+        {
+            Debug.Log($"Unable to find a game object with name {name}");
+        }
+    }
+
     private void Dismiss() => welcomePanel.SetActive(false);
 
     void Update()
