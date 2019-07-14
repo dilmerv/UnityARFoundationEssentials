@@ -20,3 +20,7 @@ Results from various examples taught in YouTube:
 - TV Placement on Walls
 
 ![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/tvPlacement.gif)
+
+- AR Basic Inventory
+
+![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arInventory.gif)
