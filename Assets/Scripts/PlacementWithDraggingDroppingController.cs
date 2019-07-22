@@ -53,7 +53,8 @@ public class PlacementWithDraggingDroppingController : MonoBehaviour
                 RaycastHit hitObject;
                 if(Physics.Raycast(ray, out hitObject))
                 {
-                    if(hitObject.transform.name.Contains("PlacedObject"))
+                    PlacementObject placementObject = hitObject.transform.GetComponent<PlacementObject>();
+                    if(placementObject != null)
                     {
                         onTouchHold = true;
                     }

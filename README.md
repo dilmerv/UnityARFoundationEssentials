@@ -24,3 +24,7 @@ Results from various examples taught in YouTube:
 - AR Basic Inventory
 
 ![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arInventory.gif)
+
+- AR Realistic Statue
+
+![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arRealistic.gif)

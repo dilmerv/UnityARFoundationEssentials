@@ -38,7 +38,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/DraggingAndDropping.unity
     guid: 178c7cc8fe57e445aa05f8b0374731f4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DraggingAndDroppingMultiple.unity
     guid: 01d048e9bb2184c3eb378a6f810c0751
   - enabled: 0
@@ -47,4 +47,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SelectionAndOverlayText.unity
     guid: bde958fead16c4a5c86127ed4ca1efe8
+  - enabled: 0
+    path: Assets/Scenes/EnableAndDisablePlaneDetection.unity
+    guid: b22eb53554e2c4811ba393d1df13a17e
+  - enabled: 1
+    path: Assets/Scenes/StatueSelectionAndDragging.unity
+    guid: 120358b11dfb84b04b895ffde7c13f61
   m_configObjects: {}
