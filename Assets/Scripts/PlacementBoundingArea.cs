@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(PlacementObject))]
 public class PlacementBoundingArea : MonoBehaviour
 {
+    [SerializeField]
+    private bool activateBoundingArea = false;
+    
     private PlacementObject placementObject;
 
     private Bounds placementBounds;

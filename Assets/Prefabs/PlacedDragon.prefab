@@ -31,6 +31,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4904366760853473833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8311663621999025009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.49924403, y: 0.7419971, z: 1.1057364}
+  m_Center: {x: 0, y: -0.05390483, z: 0.5513171}
 --- !u!114 &640575446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,19 +59,21 @@ MonoBehaviour:
   IsSelected: 0
   OverlayText: {fileID: 0}
   OverlayDisplayText: 
---- !u!65 &4904366760853473833
-BoxCollider:
+--- !u!114 &1680605615
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8311663621999025009}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.49924403, y: 0.7419971, z: 1.1057364}
-  m_Center: {x: 0, y: -0.05390483, z: 0.5513171}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41944dfa991d44221bfdf12c301c423b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateBoundingArea: 1
+  boundingRadius: 1
+  boundingBoxPosition: {x: 0, y: 0.55, z: 0}
 --- !u!1001 &8311663621998927313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,15 +87,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ca7068e92429ea4084e6c106cd9c509, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.089245796
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ca7068e92429ea4084e6c106cd9c509, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.057923764
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ca7068e92429ea4084e6c106cd9c509, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.36519098
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ca7068e92429ea4084e6c106cd9c509, type: 3}
       propertyPath: m_LocalRotation.x
