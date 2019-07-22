@@ -5,12 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlacementObject))]
 public class PlacementBoundingArea : MonoBehaviour
 {
-    [SerializeField]
-    private bool activateBoundingArea = false;
-    
     private PlacementObject placementObject;
-
-    private Bounds placementBounds;
 
     private bool initialized = false;
 
@@ -20,7 +15,10 @@ public class PlacementBoundingArea : MonoBehaviour
     private float boundingRadius = 1.0f;
 
     [SerializeField]
-    private Vector3 boundingBoxPosition = Vector3.zero;
+    private Vector3 boundingAreaPosition = Vector3.zero;
+
+    [SerializeField]
+    private Material boundingAreaMaterial;
 
     void Awake()
     {
@@ -30,12 +28,6 @@ public class PlacementBoundingArea : MonoBehaviour
     void SetupBounds()
     {   
         placementObject = GetComponent<PlacementObject>();
-
-        if(placementObject == null)
-        {
-            Debug.LogError("Placement object is required");
-            return;
-        }
         initialized = true;
     }
 
@@ -43,27 +35,23 @@ public class PlacementBoundingArea : MonoBehaviour
     {
         if(initialized)
         {
-            DrawBoundingBox(placementObject.Selected);
+            DrawBoundingArea(placementObject.Selected);
         }
     }
 
-    void OnDrawGizmosSelected()
-    {
-        SetupBounds();
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere (boundingBoxPosition, boundingRadius);
-    }
-
-    void DrawBoundingBox(bool isActive)
+    void DrawBoundingArea(bool isActive)
     {
         if(boundingArea == null)
         {
             boundingArea = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             boundingArea.name = "BoundingArea";
             boundingArea.transform.parent = placementObject.transform.parent;
+            boundingArea.GetComponent<MeshRenderer>().material = boundingAreaMaterial;
         }
 
         boundingArea.transform.localScale = new Vector3(boundingRadius * 1.5f, boundingRadius * 1.5f, boundingRadius * 1.5f);
-        boundingArea.transform.localPosition = boundingBoxPosition;
+        boundingArea.transform.localPosition = boundingAreaPosition;
+        
+        boundingArea.SetActive(isActive);
     }
 }
