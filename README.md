@@ -28,3 +28,11 @@ Results from various examples taught in YouTube:
 - AR Realistic Statue
 
 ![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arRealistic.gif)
+
+- AR Realistic Statue with Bounding Area Selection
+
+![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arRealisticBoundingAreaSelection.gif)
+
+- AR Realistic Statue with Rotation Selection
+
+![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arRealisticRotationSelection.gif)
