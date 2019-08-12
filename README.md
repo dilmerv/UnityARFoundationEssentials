@@ -7,32 +7,32 @@ Results from various examples taught in YouTube:
 
 - Face Tracking Generating Masks
 
-![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/masks.gif)
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/masks.gif" width="300">
 
 - AR Measuring Tape
 
-![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arMeasuring.gif)
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arMeasuring.gif" width="300">
 
 - AR Object Selection
 
-![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arObjectSelection.gif)
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arObjectSelection.gif" width="300">
 
 - TV Placement on Walls
 
-![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/tvPlacement.gif)
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/tvPlacement.gif" width="300">
 
 - AR Basic Inventory
 
-![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arInventory.gif)
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arInventory.gif" width="300">
 
 - AR Realistic Statue
 
-![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arRealistic.gif)
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arRealistic.gif" width="300">
 
 - AR Realistic Statue with Bounding Area Selection
 
-![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arRealisticBoundingAreaSelection.gif)
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arRealisticBoundingAreaSelection.gif" width="300">
 
 - AR Realistic Statue with Rotation Selection
 
-![image](https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arRealisticRotationSelection.gif)
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arRealisticRotationSelection.gif" width="300">
