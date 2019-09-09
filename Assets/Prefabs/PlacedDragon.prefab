@@ -71,9 +71,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41944dfa991d44221bfdf12c301c423b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateBoundingArea: 1
   boundingRadius: 0.91
-  boundingBoxPosition: {x: 0, y: 0.55, z: 0}
+  boundingAreaPosition: {x: 0, y: 0.56, z: 0}
   boundingAreaMaterial: {fileID: 2100000, guid: bde8b3dc3a88c4909b5fda39d60391c6,
     type: 2}
 --- !u!1001 &8311663621998927313
