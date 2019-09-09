@@ -56,7 +56,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/StatueSelectionWithBoundingArea.unity
     guid: dffafb474d01e42c6a372fc9370ce768
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StatueSelectionWithRotation.unity
     guid: a886d8e9231b445f5ab6be40063f2d0f
+  - enabled: 1
+    path: Assets/Scenes/ImageStencil.unity
+    guid: bd6ddcc17f7714af483130d73b3b99d1
   m_configObjects: {}
