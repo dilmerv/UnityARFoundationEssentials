@@ -36,3 +36,7 @@ Results from various examples taught in YouTube:
 - AR Realistic Statue with Rotation Selection
 
 <img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arRealisticRotationSelection.gif" width="300">
+
+- AR Realistic Statue with Scaling
+
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arObjectScaling.gif" width="300">
