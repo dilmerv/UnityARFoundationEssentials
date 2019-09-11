@@ -1440,7 +1440,9 @@ MonoBehaviour:
     type: 3}
   welcomePanel: {fileID: 67665931}
   dismissButton: {fileID: 1718691374}
+  applyScalingPerObject: 1
   scaleSlider: {fileID: 1780524078}
+  scaleTextValue: {fileID: 408210620}
   toggleOptionsButton: {fileID: 96616204}
   options: {fileID: 102932517}
   arCamera: {fileID: 1737330649}

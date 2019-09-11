@@ -17,7 +17,13 @@ public class PlacementWithManySelectionWithScaleController : MonoBehaviour
     private Button dismissButton;
 
     [SerializeField]
+    private bool applyScalingPerObject = false;
+
+    [SerializeField]
     private Slider scaleSlider;
+
+    [SerializeField]
+    private Text scaleTextValue;
 
     [SerializeField]
     private Button toggleOptionsButton;
@@ -33,6 +39,8 @@ public class PlacementWithManySelectionWithScaleController : MonoBehaviour
     private Vector2 touchPosition = default;
 
     private ARRaycastManager arRaycastManager;
+
+    private ARSessionOrigin aRSessionOrigin;
 
     private bool onTouchHold = false;
 
@@ -56,6 +64,7 @@ public class PlacementWithManySelectionWithScaleController : MonoBehaviour
     void Awake() 
     {
         arRaycastManager = GetComponent<ARRaycastManager>();
+        aRSessionOrigin = GetComponent<ARSessionOrigin>();
         dismissButton.onClick.AddListener(Dismiss);
         scaleSlider.onValueChanged.AddListener(ScaleChanged);
         toggleOptionsButton.onClick.AddListener(ToggleOptions);
@@ -79,10 +88,16 @@ public class PlacementWithManySelectionWithScaleController : MonoBehaviour
 
     private void ScaleChanged(float newValue)
     {
-        if(lastSelectedObject != null && lastSelectedObject.Selected)
-        {
-            lastSelectedObject.transform.parent.localScale = Vector3.one * newValue;
+        if(applyScalingPerObject){
+            if(lastSelectedObject != null && lastSelectedObject.Selected)
+            {
+                lastSelectedObject.transform.parent.localScale = Vector3.one * newValue;
+            }
         }
+        else 
+            aRSessionOrigin.transform.localScale = Vector3.one * newValue;
+
+        scaleTextValue.text = $"Scale {newValue}";
     }
 
     void Update()

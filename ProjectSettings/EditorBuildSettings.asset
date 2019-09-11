@@ -60,6 +60,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StatueSelectionWithRotation.unity
     guid: a886d8e9231b445f5ab6be40063f2d0f
   - enabled: 1
-    path: Assets/Scenes/StatueSelectionWithScaling.unity
+    path: Assets/Scenes/StatueSelectionWithScalingPerObject.unity
     guid: baf4d93ca8fd042af81fcdccc22ce76b
   m_configObjects: {}
