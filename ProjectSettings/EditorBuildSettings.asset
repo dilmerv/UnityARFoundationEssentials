@@ -59,7 +59,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/StatueSelectionWithRotation.unity
     guid: a886d8e9231b445f5ab6be40063f2d0f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StatueSelectionWithScalingPerObject.unity
     guid: baf4d93ca8fd042af81fcdccc22ce76b
+  - enabled: 1
+    path: Assets/Scenes/HumanBodyTracking.unity
+    guid: 5545687af04d14088a518e7c6ce8951b
   m_configObjects: {}
