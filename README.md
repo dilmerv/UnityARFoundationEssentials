@@ -9,6 +9,10 @@ Results from various examples taught in YouTube:
 
 <img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/masks.gif" width="300">
 
+- Body Tracking w/ Offset Options
+
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/bodyTracking.gif" width="300">
+
 - AR Measuring Tape
 
 <img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arMeasuring.gif" width="300">
