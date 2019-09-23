@@ -42,7 +42,7 @@ public class TrackedImageInfoExtendedManager : MonoBehaviour
             imageTrackedText.text = trackedImage.referenceImage.name;
             // Give the initial image a reasonable default scale
             trackedImage.transform.localScale = 
-                new Vector3(trackedImage.referenceImage.size.x, 0.005f, -trackedImage.referenceImage.size.y);
+                new Vector3(-trackedImage.referenceImage.size.x, 0.005f, -trackedImage.referenceImage.size.y);
         }
 
         foreach (ARTrackedImage trackedImage in eventArgs.updated)
@@ -51,7 +51,7 @@ public class TrackedImageInfoExtendedManager : MonoBehaviour
             imageTrackedText.text = trackedImage.referenceImage.name;
             // Give the initial image a reasonable default scale
             trackedImage.transform.localScale = 
-                new Vector3(trackedImage.referenceImage.size.x, 0.005f, -trackedImage.referenceImage.size.y);
+                new Vector3(-trackedImage.referenceImage.size.x, 0.005f, -trackedImage.referenceImage.size.y);
         }
     }
 }

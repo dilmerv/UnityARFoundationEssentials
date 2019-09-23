@@ -13,6 +13,10 @@ Results from various examples taught in YouTube:
 
 <img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/bodyTracking.gif" width="300">
 
+- Image Tracking w/ Reference Image Name
+
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/imageTrackingExtended.gif" width="300">
+
 - AR Measuring Tape
 
 <img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arMeasuring.gif" width="300">
