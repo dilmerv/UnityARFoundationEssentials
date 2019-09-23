@@ -23,5 +23,25 @@ MonoBehaviour:
       m_GuidHigh: 8497809403539879211
     m_Size: {x: 0.1, y: 0.1}
     m_SpecifySize: 1
-    m_Name: unity
+    m_Name: Unity
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4739128744137209686
+      m_GuidHigh: 5436162767179047346
+    m_SerializedTextureGuid:
+      m_GuidLow: 17586130437426223954
+      m_GuidHigh: 7717605880541079944
+    m_Size: {x: 0.15825689, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Library Card
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5341324563429463545
+      m_GuidHigh: 10698370960535937463
+    m_SerializedTextureGuid:
+      m_GuidLow: 1450244145701939339
+      m_GuidHigh: 13334378186741735626
+    m_Size: {x: 0.16084337, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Sam's Club Card
     m_Texture: {fileID: 0}

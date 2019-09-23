@@ -7,7 +7,7 @@ using System;
 public class HumanBoneController : MonoBehaviour
 {
     // 3D joint skeleton
-    enum JointIndices
+    public enum JointIndices
     {
         Invalid = -1,
         Root = 0, // parent: <none> [-1]
