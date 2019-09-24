@@ -17,6 +17,10 @@ Results from various examples taught in YouTube:
 
 <img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/imageTrackingExtended.gif" width="300">
 
+- Image Tracking w/ A Prefab Per Image Tracked
+
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/imageTrackingPerPrefab.gif" width="300">
+
 - AR Measuring Tape
 
 <img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arMeasuring.gif" width="300">
