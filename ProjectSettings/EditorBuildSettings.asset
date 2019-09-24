@@ -23,9 +23,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ImageTracking.unity
     guid: 28f5f274be7894e69877f107a3115f3b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ImageTrackingExtended.unity
     guid: 31833147878fa4526a5e1e69db5f1ad1
+  - enabled: 1
+    path: Assets/Scenes/ImageTrackingExtendedMultiple.unity
+    guid: 19db3c77d98b544c985371e814aad6af
   - enabled: 0
     path: Assets/Scenes/LightEstimation.unity
     guid: 117c0171f73ee4b17af6a4cb51603296
