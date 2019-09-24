@@ -19,7 +19,7 @@ Results from various examples taught in YouTube:
 
 - Image Tracking w/ A Prefab Per Image Tracked
 
-<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/imageTrackingPerPrefab.gif" width="300">
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/imageTrackingPrefab.gif" width="300">
 
 - AR Measuring Tape
 
