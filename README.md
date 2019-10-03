@@ -52,3 +52,7 @@ Results from various examples taught in YouTube:
 - AR Realistic Statue with Scaling
 
 <img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/arObjectScaling.gif" width="300">
+
+- Eye Tracking 
+
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/eyeTracking.gif" width="300">
