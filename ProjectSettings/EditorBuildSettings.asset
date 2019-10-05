@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/FaceTrackingMeshToggle.unity
     guid: b19491000e0764ce5bd2061a6eab0c17
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/EyeTracking.unity
     guid: b60cf75e1aa4743bd995ee9afeb9e1a7
   - enabled: 0
@@ -75,6 +75,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HumanBodyTracking.unity
     guid: 5545687af04d14088a518e7c6ce8951b
   - enabled: 0
-    path: Assets/Scenes/HumanBodyTrackingCustom.unity
+    path: Assets/Scenes/HumanBodyTrackingBodyOnly.unity
     guid: f555b79e9d2cd45efb65e0cb38b90a11
+  - enabled: 1
+    path: Assets/Scenes/HumanBodyTrackingBodyAndHead.unity
+    guid: 55462219b8fe24761b94f8bf6b207c91
   m_configObjects: {}
