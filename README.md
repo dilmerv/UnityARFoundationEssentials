@@ -13,9 +13,13 @@ Results from various examples taught in YouTube:
 
 <img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/bodyTracking.gif" width="300">
 
-- Body Tracking w/ Skeleton made of Cubes
+- Body Tracking w/ Skeleton made of Cubes - No Hands
 
 <img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/bodyTrackingCubes.gif" width="300">
+
+- Body Tracking w/ Skeleton made of Cubes - Full Body
+
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/bodyTrackingCubesFull.gif" width="300">
 
 - Image Tracking w/ Reference Image Name
 
