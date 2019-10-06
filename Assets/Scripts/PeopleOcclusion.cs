@@ -5,6 +5,7 @@ using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(ARCameraManager))]
 public class PeopleOcclusion : MonoBehaviour
@@ -21,8 +22,13 @@ public class PeopleOcclusion : MonoBehaviour
     [SerializeField] 
     private Shader m_peopleOcclusionShader = null;
     
+    [SerializeField]
+    private Button nextTextureButton;
+
     [SerializeField] 
-    private Texture2D humanOverlayTexture;
+    private Texture2D[] humanOverlayTextures;
+
+    private int currentTexture = 0;
     
     private Texture2D m_cameraFeedTexture = null;
     
@@ -32,6 +38,7 @@ public class PeopleOcclusion : MonoBehaviour
 	{
         m_material = new Material(m_peopleOcclusionShader);
         GetComponent<Camera>().depthTextureMode |= DepthTextureMode.Depth;
+        nextTextureButton.onClick.AddListener(NextTexture);
     }
 
     private void OnEnable()
@@ -43,6 +50,17 @@ public class PeopleOcclusion : MonoBehaviour
     {
         m_cameraManager.frameReceived -= OnCameraFrameReceived;
     }
+
+    private void NextTexture()
+    {
+        if(currentTexture == humanOverlayTextures.Length - 1)
+            currentTexture = 0;
+        else
+            currentTexture++;
+
+        nextTextureButton.GetComponentInChildren<Text>().text = $"Next Texture ({currentTexture})";
+    }
+
     void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
         if(PeopleOcclusionSupported())
@@ -119,7 +137,7 @@ public class PeopleOcclusion : MonoBehaviour
         }
 
         m_cameraFeedTexture.Apply();
-        m_material.SetTexture("_CameraFeed", humanOverlayTexture);
+        m_material.SetTexture("_CameraFeed", humanOverlayTextures[currentTexture]);
     }
 
     private float CalculateUVMultiplierLandScape(Texture2D cameraTexture)
@@ -134,6 +152,5 @@ public class PeopleOcclusion : MonoBehaviour
         float screenAspect = (float)Screen.height / (float)Screen.width;
         float cameraTextureAspect = (float)cameraTexture.width / (float)cameraTexture.height;
         return screenAspect / cameraTextureAspect;
-
     }
 }
