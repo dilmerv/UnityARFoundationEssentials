@@ -16,13 +16,21 @@ public class PlacementWithDraggingDroppingController : MonoBehaviour
     private Button dismissButton;
 
     [SerializeField]
+    private Button lockButton;
+
+    [SerializeField]
     private Camera arCamera;
+
+    [SerializeField]
+    private float defaultRotation = 0;
 
     private GameObject placedObject;
 
     private Vector2 touchPosition = default;
 
     private ARRaycastManager arRaycastManager;
+
+    private bool isLocked = false;
 
     private bool onTouchHold = false;
 
@@ -32,8 +40,23 @@ public class PlacementWithDraggingDroppingController : MonoBehaviour
     {
         arRaycastManager = GetComponent<ARRaycastManager>();
         dismissButton.onClick.AddListener(Dismiss);
+
+        if(lockButton != null)
+        {
+            lockButton.onClick.AddListener(Lock);
+        }
     }
     private void Dismiss() => welcomePanel.SetActive(false);
+
+    private void Lock() 
+    {
+        isLocked = !isLocked;
+        lockButton.GetComponentInChildren<Text>().text = isLocked ? "Locked" : "Unlocked";
+        if(placedObject != null) {
+            placedObject.GetComponent<PlacementObject>()
+                .SetOverlayText(isLocked ? "AR Object Locked" : "AR Object Unlocked");
+        }
+    }
 
     void Update()
     {
@@ -56,7 +79,8 @@ public class PlacementWithDraggingDroppingController : MonoBehaviour
                     PlacementObject placementObject = hitObject.transform.GetComponent<PlacementObject>();
                     if(placementObject != null)
                     {
-                        onTouchHold = true;
+                        onTouchHold = isLocked ? false : true;
+                        placementObject.SetOverlayText(isLocked ? "AR Object Locked" : "AR Object Unlocked");
                     }
                 }
             }
@@ -73,14 +97,25 @@ public class PlacementWithDraggingDroppingController : MonoBehaviour
 
             if(placedObject == null)
             {
-                placedObject = Instantiate(placedPrefab, hitPose.position, hitPose.rotation);
+                if(defaultRotation > 0)
+                {
+                    placedObject = Instantiate(placedPrefab, hitPose.position, Quaternion.identity);
+                    placedObject.transform.Rotate(Vector3.up, defaultRotation);
+                }
+                else 
+                {
+                    placedObject = Instantiate(placedPrefab, hitPose.position, hitPose.rotation);
+                }
             }
             else 
             {
                 if(onTouchHold)
                 {
                     placedObject.transform.position = hitPose.position;
-                    placedObject.transform.rotation = hitPose.rotation;
+                    if(defaultRotation == 0)
+                    {
+                        placedObject.transform.rotation = hitPose.rotation;
+                    }
                 }
             }
         }

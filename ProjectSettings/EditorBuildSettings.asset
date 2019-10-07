@@ -71,6 +71,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/StatueSelectionWithScalingPerObject.unity
     guid: baf4d93ca8fd042af81fcdccc22ce76b
+  - enabled: 1
+    path: Assets/Scenes/SelectionLockingAndOverlayText.unity
+    guid: 7311e75630c8e43a4b1d4f29201c3f6d
   - enabled: 0
     path: Assets/Scenes/HumanBodyTracking.unity
     guid: 5545687af04d14088a518e7c6ce8951b
@@ -83,7 +86,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/HumanBodyTrackingBodyFull.unity
     guid: 2ebfb21ae27fd4a2fb0e1cd4bce53b48
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PeopleOcclusion.unity
     guid: 8abb7b4f4636e45c0bd83eef0418c2db
   m_configObjects: {}

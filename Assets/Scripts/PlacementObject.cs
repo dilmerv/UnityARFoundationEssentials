@@ -6,6 +6,9 @@ public class PlacementObject : MonoBehaviour
     [SerializeField]
     private bool IsSelected;
 
+    [SerializeField]
+    private bool IsLocked;
+
     public bool Selected 
     { 
         get 
@@ -18,11 +21,33 @@ public class PlacementObject : MonoBehaviour
         }
     }
 
+    public bool Locked 
+    { 
+        get 
+        {
+            return this.IsLocked;
+        }
+        set 
+        {
+            IsLocked = value;
+        }
+    }
+
     [SerializeField]
     private TextMeshPro OverlayText;
 
     [SerializeField]
     private string OverlayDisplayText;
+
+
+    public void SetOverlayText(string text)
+    {
+        if(OverlayText != null)
+        {
+            OverlayText.gameObject.SetActive(true);
+            OverlayText.text = text;
+        }
+    }
 
     void Awake ()
     {
