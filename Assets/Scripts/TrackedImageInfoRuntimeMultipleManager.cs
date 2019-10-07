@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
-public class TrackedImageInfoRuntimeManager : MonoBehaviour
+public class TrackedImageInfoRuntimeMultipleManager : MonoBehaviour
 {
     [SerializeField]
     private Text debugLog;
@@ -12,13 +12,18 @@ public class TrackedImageInfoRuntimeManager : MonoBehaviour
     private Text currentImageText;
 
     [SerializeField]
+    private Button firstButton, secondButton;
+
+    [SerializeField]
     private GameObject prefabOnTrack;
 
     [SerializeField]
     private Vector3 scaleFactor = new Vector3(0.1f,0.1f,0.1f);
 
     [SerializeField]
-    XRReferenceImageLibrary xrReferenceImageLibrary;
+    XRReferenceImageLibrary[] xrReferenceImageLibrary;
+
+    private int currentSelectedLibrary = 0;
     
     private ARTrackedImageManager trackImageManager;
 
@@ -27,15 +32,24 @@ public class TrackedImageInfoRuntimeManager : MonoBehaviour
         debugLog.text += "Creating Runtime Mutable Image Library\n";
 
         trackImageManager = gameObject.AddComponent<ARTrackedImageManager>();
-        trackImageManager.referenceLibrary = trackImageManager.CreateRuntimeLibrary(xrReferenceImageLibrary);
+        trackImageManager.referenceLibrary = trackImageManager.CreateRuntimeLibrary(xrReferenceImageLibrary[0]);
         trackImageManager.maxNumberOfMovingImages = 3;
         trackImageManager.trackedImagePrefab = prefabOnTrack;
 
         trackImageManager.enabled = true;
 
         trackImageManager.trackedImagesChanged += OnTrackedImagesChanged;
+
+        firstButton.onClick.AddListener(() => SetReferenceImageLibrary(0));
+
+        secondButton.onClick.AddListener(() => SetReferenceImageLibrary(1));
         
         ShowTrackerInfo();
+    }
+
+    public void SetReferenceImageLibrary(int selectedLibrary = 0)
+    {
+        trackImageManager.referenceLibrary = trackImageManager.CreateRuntimeLibrary(xrReferenceImageLibrary[selectedLibrary]);
     }
 
     public void ShowTrackerInfo()
