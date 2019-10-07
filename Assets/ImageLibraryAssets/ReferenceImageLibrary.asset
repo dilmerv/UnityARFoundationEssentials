@@ -53,5 +53,5 @@ MonoBehaviour:
       m_GuidHigh: 895629038344484298
     m_Size: {x: 0.1584653, y: 0.1}
     m_SpecifySize: 1
-    m_Name: cardgym
+    m_Name: Gym Card
     m_Texture: {fileID: 0}

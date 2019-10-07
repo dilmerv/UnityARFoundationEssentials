@@ -303,8 +303,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.3, y: -62.6}
-  m_SizeDelta: {x: 784.1, y: 1320.8}
+  m_AnchoredPosition: {x: 3, y: -47.5}
+  m_SizeDelta: {x: 784.1, y: 512.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &215976608
 MonoBehaviour:
@@ -328,10 +328,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 58
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -438,6 +438,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 839190792}
   - {fileID: 1171805824}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -481,7 +482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.3, y: 661}
+  m_AnchoredPosition: {x: 2.9999876, y: 271.70007}
   m_SizeDelta: {x: 784.1, y: 83.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &514279566
@@ -536,7 +537,6 @@ GameObject:
   m_Component:
   - component: {fileID: 827212986}
   - component: {fileID: 827212985}
-  - component: {fileID: 827212988}
   - component: {fileID: 827212987}
   m_Layer: 0
   m_Name: AR Session Origin
@@ -580,44 +580,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827212984}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5780e82bb2774594a454e43fbace386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   debugLog: {fileID: 215976608}
-  jobState: {fileID: 839190793}
-  scaleFactor: {x: 0.1, y: 0.1, z: 0.1}
-  trackImageManager: {fileID: 827212988}
-  dynamicTexture: {fileID: 2800000, guid: dac8e049cdaa0449ca350c79dde96d0c, type: 3}
-  xRReferenceImage:
-    m_SerializedGuid:
-      m_GuidLow: 0
-      m_GuidHigh: 0
-    m_SerializedTextureGuid:
-      m_GuidLow: 0
-      m_GuidHigh: 0
-    m_Size: {x: 0.1584653, y: 0.1}
-    m_SpecifySize: 1
-    m_Name: TestImage
-    m_Texture: {fileID: 2800000, guid: dac8e049cdaa0449ca350c79dde96d0c, type: 3}
---- !u!114 &827212988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 827212984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedLibrary: {fileID: 11400000, guid: d32cf4f25abb242b8bd697d7e406fa81,
-    type: 2}
-  m_MaxNumberOfMovingImages: 3
-  m_TrackedImagePrefab: {fileID: 3943361539576728579, guid: bbd7eab52801040d2adc135bf3cf00ba,
+  currentImageText: {fileID: 839190793}
+  prefabOnTrack: {fileID: 3993884769399563479, guid: e6b896917088f4417bb38140f2444425,
     type: 3}
+  scaleFactor: {x: 0.1, y: 0.1, z: 0.1}
+  xrReferenceImageLibrary: {fileID: 11400000, guid: d32cf4f25abb242b8bd697d7e406fa81,
+    type: 2}
 --- !u!1 &839190791
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +604,7 @@ GameObject:
   - component: {fileID: 839190794}
   - component: {fileID: 839190793}
   m_Layer: 5
-  m_Name: JobState
+  m_Name: ImageName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -643,16 +617,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839190791}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1171805824}
-  m_RootOrder: 2
+  m_Father: {fileID: 252772517}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.3, y: -1450}
+  m_AnchoredPosition: {x: -8.3, y: -1078}
   m_SizeDelta: {x: 784.1, y: 76.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &839190793
@@ -688,7 +662,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[JOB STATE]'
+  m_Text: 
 --- !u!222 &839190794
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -794,14 +768,13 @@ RectTransform:
   m_Children:
   - {fileID: 514279565}
   - {fileID: 215976607}
-  - {fileID: 839190792}
   m_Father: {fileID: 252772517}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 331.4}
-  m_SizeDelta: {x: 879.5, y: 1529.9}
+  m_AnchoredPosition: {x: 0, y: 757.4}
+  m_SizeDelta: {x: 879.5, y: 677.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1171805825
 MonoBehaviour:
