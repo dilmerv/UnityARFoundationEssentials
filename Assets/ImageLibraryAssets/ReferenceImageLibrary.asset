@@ -45,3 +45,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: Sam's Club Card
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4909142924758935393
+      m_GuidHigh: 13412670820941918386
+    m_SerializedTextureGuid:
+      m_GuidLow: 309004183150321737
+      m_GuidHigh: 895629038344484298
+    m_Size: {x: 0.1584653, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: cardgym
+    m_Texture: {fileID: 0}
