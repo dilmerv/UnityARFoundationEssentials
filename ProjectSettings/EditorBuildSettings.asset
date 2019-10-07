@@ -71,7 +71,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/StatueSelectionWithScalingPerObject.unity
     guid: baf4d93ca8fd042af81fcdccc22ce76b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SelectionLockingAndOverlayText.unity
     guid: 7311e75630c8e43a4b1d4f29201c3f6d
   - enabled: 0
@@ -89,4 +89,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PeopleOcclusion.unity
     guid: 8abb7b4f4636e45c0bd83eef0418c2db
+  - enabled: 1
+    path: Assets/Scenes/FeatureSupported.unity
+    guid: 2a127ed2b18744a84b4d489fe31efd0e
   m_configObjects: {}
