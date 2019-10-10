@@ -38,7 +38,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ImageTrackingRuntimeMultiple.unity
     guid: 03bcf74224f98414d90004d9bfb955af
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ImageTrackingRuntimeSave.unity
     guid: 9290653cc7db64b51b52e4d66717e82e
   - enabled: 0
@@ -101,4 +101,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/FeatureSupported.unity
     guid: 2a127ed2b18744a84b4d489fe31efd0e
+  - enabled: 1
+    path: Assets/Scenes/ReferencePointForItems.unity
+    guid: a27e3f899445f4d8b8710be603279930
   m_configObjects: {}
