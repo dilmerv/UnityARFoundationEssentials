@@ -101,7 +101,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/FeatureSupported.unity
     guid: 2a127ed2b18744a84b4d489fe31efd0e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ReferencePointForItems.unity
     guid: a27e3f899445f4d8b8710be603279930
+  - enabled: 1
+    path: Assets/Scenes/HumanBodyTrackingDrawing.unity
+    guid: 17f8d496829ca425798a3cde1a516a6d
   m_configObjects: {}
