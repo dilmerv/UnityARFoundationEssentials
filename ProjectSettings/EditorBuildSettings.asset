@@ -17,9 +17,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/HumanBodyTrackingDrawingWithOptions.unity
     guid: 3b12108db89c749c9a621f853ab3c8a9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HumanBodyTrackingWithParticles.unity
     guid: 4753fc2e4855243fb9a184f94f381ebd
+  - enabled: 1
+    path: Assets/Scenes/HumanBodyTrackingWithParticlesFull.unity
+    guid: 3fe9a2d5916004a5c96f084ae9807a20
   - enabled: 0
     path: Assets/Scenes/FaceTrackingMeshRandom.unity
     guid: 72f1137d9218a4271bda4beab9e53658

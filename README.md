@@ -15,6 +15,10 @@ Results from various examples taught in YouTube:
 
 <img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/peopleOcclusionFuture.gif" width="300">
 
+- Body Tracking w/ Fire Particles
+
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/bodytrackingfire.gif" width="300">
+
 - Body Tracking w/ Offset Options
 
 <img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/bodyTracking.gif" width="300">
