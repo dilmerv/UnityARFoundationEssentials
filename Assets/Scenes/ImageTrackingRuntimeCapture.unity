@@ -867,10 +867,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugLog: {fileID: 215976608}
   jobLog: {fileID: 98885830}
-  currentImageText: {fileID: 1683856149}
+  currentImageText: {fileID: 839190793}
   captureImageButton: {fileID: 2110905202}
-  prefabOnTrack: {fileID: 9008783791683432876, guid: 385313f2a6f4644c5904f180943b52eb,
-    type: 3}
+  placedObject: {fileID: 0}
   scaleFactor: {x: 0.1, y: 0.1, z: 0.1}
   runtimeImageLibrary: {fileID: 11400000, guid: f5ddeb57ca2ad4b26a1ba593ca3bfd89,
     type: 2}
@@ -1073,7 +1072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.105882354}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.50980395}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
