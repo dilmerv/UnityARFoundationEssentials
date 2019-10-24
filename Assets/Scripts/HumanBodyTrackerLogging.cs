@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
@@ -85,8 +86,7 @@ public class HumanBodyTrackerLogging : MonoBehaviour
                 boneTrackers = humanBoneController.skeletonRoot.GetComponentsInChildren<BoneTracker>();
                 foreach(BoneTracker boneTracker in boneTrackers)
                 {
-                    loggingText.text += $"Bone: {boneTracker.gameObject.transform.parent.name} Position: {boneTracker.gameObject.transform.position}";
-                    loggingText.text += $"Bone: {boneTracker.gameObject.transform.parent.name} LocalPosition: {boneTracker.gameObject.transform.localPosition}";
+                    loggingText.text += $"Bone: {boneTracker.transform.parent.name} Position: {boneTracker.transform.position}\n";
                 }
             }
 
@@ -103,10 +103,12 @@ public class HumanBodyTrackerLogging : MonoBehaviour
             {
                 foreach(BoneTracker boneTracker in boneTrackers)
                 {
-                    loggingText.text += $"Bone: {boneTracker.gameObject.transform.parent.name} Position: {boneTracker.gameObject.transform.position}";
-                    loggingText.text += $"Bone: {boneTracker.gameObject.transform.parent.name} LocalPosition: {boneTracker.gameObject.transform.localPosition}";
+                    loggingText.text += $"Bone: {boneTracker.transform.parent.name} Position: {boneTracker.transform.position}\n";
                 }
             }
+            
+            // detecting if we are beyond the limits before we can spawn a particle (super powers)
+            ApplyPowers(boneTrackers);
         }
 
         foreach (var humanBody in eventArgs.removed)
@@ -117,6 +119,36 @@ public class HumanBodyTrackerLogging : MonoBehaviour
                 Destroy(humanBoneController.gameObject);
                 skeletonTracker.Remove(humanBody.trackableId);
             }
+        }
+    }
+
+    private void ApplyPowers(BoneTracker[] bones)
+    {
+        BoneTracker leftHandBone = bones.Where(b => b.transform.parent.name == "LeftHand").SingleOrDefault();
+
+        BoneTracker rightHandBone = bones.Where(b => b.transform.parent.name == "RightHand").SingleOrDefault();
+
+        BoneTracker spine = bones.Where(b => b.transform.parent.name == "Spine4").SingleOrDefault();
+
+        if(leftHandBone == null || rightHandBone == null || spine == null)
+        {
+            string error = "Bones tracked were not found...";
+            // spawn particle on the left hand
+            loggingText.text += $"{error}";
+            Debug.LogError(error);
+            return;
+        }
+
+        if(leftHandBone.transform.position.y > spine.transform.position.y)
+        {
+            // spawn particle on the left hand
+            loggingText.text += $"LeftHandBone is above Spine\n";
+        }
+
+        if(rightHandBone.transform.position.y > spine.transform.position.y)
+        {
+            // spawn particle on the right hand
+            loggingText.text += $"RightHandBone is above Spine\n";
         }
     }
 }
