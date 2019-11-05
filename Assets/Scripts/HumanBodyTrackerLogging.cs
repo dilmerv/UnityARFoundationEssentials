@@ -26,6 +26,12 @@ public class HumanBodyTrackerLogging : MonoBehaviour
     [SerializeField]
     private Button dismissButton;
 
+    [SerializeField]
+    private GameObject debugPanel;
+
+    [SerializeField]
+    private Button toggleDebugButton;
+
     private BoneTracker[] boneTrackers;
 
     public ARHumanBodyManager HumanBodyManagers
@@ -43,11 +49,26 @@ public class HumanBodyTrackerLogging : MonoBehaviour
     void Awake()
     {
         dismissButton.onClick.AddListener(DissmissWelcomePanel);
+        toggleDebugButton.onClick.AddListener(ToggleDebugPanel);
     }
 
     void DissmissWelcomePanel()
     {
         welcomePanel.gameObject.SetActive(false);
+    }
+
+    void ToggleDebugPanel()
+    {
+        if(debugPanel.activeSelf)
+        {
+            debugPanel.SetActive(false);
+            toggleDebugButton.GetComponentInChildren<Text>().text = "DEBUG ON";
+        }
+        else 
+        {
+            debugPanel.SetActive(true);
+            toggleDebugButton.GetComponentInChildren<Text>().text = "DEBUG OFF";
+        }
     }
 
     void OnEnable()
@@ -139,16 +160,29 @@ public class HumanBodyTrackerLogging : MonoBehaviour
             return;
         }
 
+        SpawnSuperPowers leftHandPowers = leftHandBone.GetComponent<SpawnSuperPowers>();
+        SpawnSuperPowers rightHandPowers = rightHandBone.GetComponent<SpawnSuperPowers>();
+
         if(leftHandBone.transform.position.y > spine.transform.position.y)
         {
             // spawn particle on the left hand
+            leftHandPowers.Started = true;
             loggingText.text += $"LeftHandBone is above Spine\n";
+        }
+        else 
+        {
+            leftHandPowers.Started = false;
         }
 
         if(rightHandBone.transform.position.y > spine.transform.position.y)
         {
             // spawn particle on the right hand
+            rightHandPowers.Started = true;
             loggingText.text += $"RightHandBone is above Spine\n";
+        }
+        else 
+        {
+            rightHandPowers.Started = false;
         }
     }
 }
