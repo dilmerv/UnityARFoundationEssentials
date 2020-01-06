@@ -74,3 +74,7 @@ Results from various examples taught in YouTube:
 - Eye Tracking 
 
 <img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/eyeTracking.gif" width="300">
+
+- Automatic Placement With Horizontal Planes
+
+<img src="https://github.com/dilmerv/UnityARFoundationEssentials/blob/master/docs/images/autoplacement.gif" width="300">
