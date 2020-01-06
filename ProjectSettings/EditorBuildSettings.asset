@@ -86,7 +86,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SelectionAndOverlayText.unity
     guid: bde958fead16c4a5c86127ed4ca1efe8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SelectionAndLaunchingACanvas.unity
     guid: 961959ae491d746339eacf1b7806db83
   - enabled: 0
@@ -134,4 +134,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ReferencePointForItemsWithCameraDistance.unity
     guid: 4a893217baf4f4303858c306bd300dc1
+  - enabled: 1
+    path: Assets/Scenes/AutoPlacementOfPrefab.unity
+    guid: 9a28afaa34e22495f92a701459035391
   m_configObjects: {}

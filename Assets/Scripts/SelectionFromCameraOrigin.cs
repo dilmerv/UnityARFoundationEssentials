@@ -52,7 +52,7 @@ public class SelectionFromCameraOrigin : MonoBehaviour
         if(welcomePanel.activeSelf)
             return;
 
-        if(generateRayAfterSeconds >= rayTimer)
+        if(rayTimer >= generateRayAfterSeconds)
         {
             // creates a ray from the screen point origin 
             Ray ray = arCamera.ScreenPointToRay(selector.transform.position);
