@@ -1,3 +1,5 @@
+**Note**: This repo is heavily based on https://github.com/Unity-Technologies/arfoundation-samples so I recommend using that repo as the main source and use at my examples which were built while making YouTube videos about AR Foundation.
+
 # UnityARFoundationEssentials
 This repository contains a variety of examples created while making a new video series in YouTube about AR Foundation Essentials with Unity3d. The Break down of videos and results are shown below:
 
