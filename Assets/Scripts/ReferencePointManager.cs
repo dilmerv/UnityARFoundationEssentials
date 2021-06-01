@@ -5,7 +5,7 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
 [RequireComponent(typeof(ARRaycastManager))]
-[RequireComponent(typeof(ARReferencePointManager))]
+[RequireComponent(typeof(ARAnchorManager))]
 [RequireComponent(typeof(ARPlaneManager))]
 public class ReferencePointManager : MonoBehaviour
 {
@@ -23,18 +23,18 @@ public class ReferencePointManager : MonoBehaviour
 
     private ARRaycastManager arRaycastManager;
 
-    private ARReferencePointManager arReferencePointManager;
+    private ARAnchorManager arReferencePointManager;
 
     private ARPlaneManager arPlaneManager;
 
-    private List<ARReferencePoint> referencePoints = new List<ARReferencePoint>();
+    private List<ARAnchor> referencePoints = new List<ARAnchor>();
 
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>(); 
     
     void Awake() 
     {
         arRaycastManager = GetComponent<ARRaycastManager>();
-        arReferencePointManager = GetComponent<ARReferencePointManager>();
+        arReferencePointManager = GetComponent<ARAnchorManager>();
         arPlaneManager = GetComponent<ARPlaneManager>();
 
         toggleButton.onClick.AddListener(TogglePlaneDetection);
@@ -56,7 +56,7 @@ public class ReferencePointManager : MonoBehaviour
         if(arRaycastManager.Raycast(touch.position, hits, TrackableType.PlaneWithinPolygon))
         {
             Pose hitPose = hits[0].pose;
-            ARReferencePoint referencePoint = arReferencePointManager.AddReferencePoint(hitPose);
+            ARAnchor referencePoint = arReferencePointManager.AddAnchor(hitPose);
 
             if(referencePoint == null)
             {
@@ -88,9 +88,9 @@ public class ReferencePointManager : MonoBehaviour
 
     private void ClearReferencePoints()
     {
-        foreach(ARReferencePoint referencePoint in referencePoints)
+        foreach(ARAnchor referencePoint in referencePoints)
         {
-            arReferencePointManager.RemoveReferencePoint(referencePoint);
+            arReferencePointManager.RemoveAnchor(referencePoint);
         }
         referencePoints.Clear();
         referencePointCount.text = $"Reference Point Count: {referencePoints.Count}";

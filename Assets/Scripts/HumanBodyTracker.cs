@@ -21,17 +21,17 @@ public class HumanBodyTracker : MonoBehaviour
     [SerializeField]
     private float skeletonOffsetZ = 0;
 
-    [SerializeField]
-    [Tooltip("The ARHumanBodyManager which will produce body tracking events.")]
-    private ARHumanBodyManager humanBodyManager;
+    //[SerializeField]
+    //[Tooltip("The ARHumanBodyManager which will produce body tracking events.")]
+    //private ARHumanBodyManager humanBodyManager;
 
     private Dictionary<TrackableId, HumanBoneController> skeletonTracker = new Dictionary<TrackableId, HumanBoneController>();
 
-    public ARHumanBodyManager HumanBodyManagers
+    /*public ARHumanBodyManager HumanBodyManagers
     {
         get { return humanBodyManager; }
         set { humanBodyManager = value; }
-    }
+    }*/
 
     public GameObject SkeletonPrefab
     {
@@ -39,7 +39,7 @@ public class HumanBodyTracker : MonoBehaviour
         set { skeletonPrefab = value; }
     }
 
-    void OnEnable()
+    /*void OnEnable()
     {
         Debug.Assert(humanBodyManager != null, "Human body manager is required.");
         humanBodyManager.humanBodiesChanged += OnHumanBodiesChanged;
@@ -107,5 +107,5 @@ public class HumanBodyTracker : MonoBehaviour
 
         HumanBodyTrackerUI.Instance.humanBodyTrackerText.text = $"{this.gameObject.name} Position: {this.gameObject.transform.position}\n"+
             $"LocalPosition: {this.gameObject.transform.localPosition}";
-    }
+    }*/
 }

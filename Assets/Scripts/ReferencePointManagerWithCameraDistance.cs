@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 
-[RequireComponent(typeof(ARReferencePointManager))]
+[RequireComponent(typeof(ARAnchorManager))]
 public class ReferencePointManagerWithCameraDistance : MonoBehaviour
 {
     [SerializeField]
@@ -18,13 +18,13 @@ public class ReferencePointManagerWithCameraDistance : MonoBehaviour
     [SerializeField]
     private Camera arCamera;
 
-    private ARReferencePointManager arReferencePointManager;
+    private ARAnchorManager arReferencePointManager;
 
-    private List<ARReferencePoint> referencePoints = new List<ARReferencePoint>();
+    private List<ARAnchor> referencePoints = new List<ARAnchor>();
     
     void Awake() 
     {
-        arReferencePointManager = GetComponent<ARReferencePointManager>();
+        arReferencePointManager = GetComponent<ARAnchorManager>();
         clearReferencePointsButton.onClick.AddListener(ClearReferencePoints);
 
         debugLog.gameObject.SetActive(false);
@@ -42,14 +42,14 @@ public class ReferencePointManagerWithCameraDistance : MonoBehaviour
 
         Vector3 newPos = arCamera.ScreenToWorldPoint(new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, 0.3f));
         
-        arReferencePointManager.AddReferencePoint(new Pose(newPos, Quaternion.identity));
+        arReferencePointManager.AddAnchor(new Pose(newPos, Quaternion.identity));
     }
 
     private void ClearReferencePoints()
     {
-        foreach(ARReferencePoint referencePoint in referencePoints)
+        foreach(ARAnchor referencePoint in referencePoints)
         {
-            arReferencePointManager.RemoveReferencePoint(referencePoint);
+            arReferencePointManager.RemoveAnchor(referencePoint);
         }
         referencePoints.Clear();
         referencePointCount.text = $"Reference Point Count: {referencePoints.Count}";

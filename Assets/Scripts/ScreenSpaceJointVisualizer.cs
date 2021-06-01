@@ -44,7 +44,7 @@ public class ScreenSpaceJointVisualizer : MonoBehaviour
         set { m_ARCamera = value; }
     }
 
-    [SerializeField]
+    /*[SerializeField]
     [Tooltip("The ARHumanBodyManager which will produce human body anchors.")]
     ARHumanBodyManager m_HumanBodyManager;
 
@@ -55,7 +55,7 @@ public class ScreenSpaceJointVisualizer : MonoBehaviour
     {
         get { return m_HumanBodyManager; }
         set { m_HumanBodyManager = value; }
-    }
+    }*/
 
     [SerializeField]
     [Tooltip("A prefab that contains a LineRenderer component that will be used for rendering lines, representing the skeleton joints.")]
@@ -78,7 +78,7 @@ public class ScreenSpaceJointVisualizer : MonoBehaviour
         m_LineRenderers = new Dictionary<int, GameObject>();
     }
 
-    void UpdateRenderer(NativeArray<XRHumanBodyPose2DJoint> joints, int index)
+    /*void UpdateRenderer(NativeArray<XRHumanBodyPose2DJoint> joints, int index)
     {
         GameObject lineRendererGO;
         if (!m_LineRenderers.TryGetValue(index, out lineRendererGO))
@@ -148,7 +148,7 @@ public class ScreenSpaceJointVisualizer : MonoBehaviour
                     UpdateRenderer(joints, i);
             }
         }
-    }
+    }*/
 
     void HideJointLines()
     {

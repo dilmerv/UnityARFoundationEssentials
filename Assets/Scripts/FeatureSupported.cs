@@ -10,8 +10,8 @@ public class FeatureSupported : MonoBehaviour
     [SerializeField]
     private ARFaceManager arFaceManager;
 
-    [SerializeField]
-    private ARHumanBodyManager arHumanBodyManager;
+    //[SerializeField]
+    //private ARHumanBodyManager arHumanBodyManager;
 
     [SerializeField]
     private ARPointCloudManager arPointCloudManager;
@@ -24,9 +24,9 @@ public class FeatureSupported : MonoBehaviour
         bool supportsFaceMeshVerticesAndIndices = arFaceManager.subsystem.SubsystemDescriptor.supportsFaceMeshVerticesAndIndices;
 
         // Human Body Support Checks
-        bool supportsHumanBody2D = arHumanBodyManager.subsystem.SubsystemDescriptor.supportsHumanBody2D;
-        bool supportsHumanBody3D = arHumanBodyManager.subsystem.SubsystemDescriptor.supportsHumanBody3D;
-        bool supportsHumanDepthImage = arHumanBodyManager.subsystem.SubsystemDescriptor.supportsHumanDepthImage;
+        bool supportsHumanBody2D = false;// arHumanBodyManager.subsystem.SubsystemDescriptor.supportsHumanBody2D;
+        bool supportsHumanBody3D = false;//arHumanBodyManager.subsystem.SubsystemDescriptor.supportsHumanBody3D;
+        bool supportsHumanDepthImage = false;//arHumanBodyManager.subsystem.SubsystemDescriptor.supportsHumanDepthImage;
 
         // Point Cloud Support Checks
         bool supportsConfidence = arPointCloudManager.subsystem.SubsystemDescriptor.supportsConfidence;

@@ -144,7 +144,7 @@ public class HumanBoneController : MonoBehaviour
         }
     }
 
-    public void ApplyBodyPose(ARHumanBody body, Vector3 offset)
+    /*public void ApplyBodyPose(ARHumanBody body, Vector3 offset)
     {
         var joints = body.joints;
         if (!joints.IsCreated)
@@ -160,7 +160,7 @@ public class HumanBoneController : MonoBehaviour
                 bone.transform.localRotation = joint.localPose.rotation;
             }
         }
-    }
+    }*/
 
     void ProcessJoint(Transform joint)
     {

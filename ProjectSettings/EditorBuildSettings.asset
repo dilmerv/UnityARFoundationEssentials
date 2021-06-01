@@ -137,4 +137,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AutoPlacementOfPrefab.unity
     guid: 9a28afaa34e22495f92a701459035391
-  m_configObjects: {}
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 03412c27bca4c324a8380b7ceeecaeef,
+      type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: d9868e673901cb548b2ea1fb50d1d8f7,
+      type: 2}

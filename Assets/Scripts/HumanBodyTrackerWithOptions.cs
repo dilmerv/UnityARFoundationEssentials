@@ -34,19 +34,19 @@ public class HumanBodyTrackerWithOptions : MonoBehaviour
     [SerializeField]
     private GameObject welcomePanel;
 
-    [SerializeField]
+    /*[SerializeField]
     [Tooltip("The ARHumanBodyManager which will produce body tracking events.")]
-    private ARHumanBodyManager humanBodyManager;
+    private ARHumanBodyManager humanBodyManager;*/
 
     private Dictionary<TrackableId, HumanBoneController> skeletonTracker = new Dictionary<TrackableId, HumanBoneController>();
 
     private TrailRenderer trailRenderer;
 
-    public ARHumanBodyManager HumanBodyManagers
+    /*public ARHumanBodyManager HumanBodyManagers
     {
         get { return humanBodyManager; }
         set { humanBodyManager = value; }
-    }
+    }*/
 
     public GameObject SkeletonPrefab
     {
@@ -61,22 +61,22 @@ public class HumanBodyTrackerWithOptions : MonoBehaviour
         dismissButton.onClick.AddListener(DissmissWelcomePanel);
     }
 
-    void OnEnable()
+    /*void OnEnable()
     {
         Debug.Assert(humanBodyManager != null, "Human body manager is required.");
         humanBodyManager.humanBodiesChanged += OnHumanBodiesChanged;
-    }
+    }*/
 
     void DissmissWelcomePanel()
     {
         welcomePanel.gameObject.SetActive(false);
     }
 
-    void OnDisable()
+    /*void OnDisable()
     {
         if (humanBodyManager != null)
             humanBodyManager.humanBodiesChanged -= OnHumanBodiesChanged;
-    }
+    }*/
 
     void OnCurveTimeSliderChanged(float value)
     {
@@ -108,7 +108,7 @@ public class HumanBodyTrackerWithOptions : MonoBehaviour
         }
     }
 
-    void OnHumanBodiesChanged(ARHumanBodiesChangedEventArgs eventArgs)
+    /*void OnHumanBodiesChanged(ARHumanBodiesChangedEventArgs eventArgs)
     {
         HumanBoneController humanBoneController;
 
@@ -170,5 +170,5 @@ public class HumanBodyTrackerWithOptions : MonoBehaviour
 
         HumanBodyTrackerUI.Instance.humanBodyTrackerText.text = $"{this.gameObject.name} Position: {this.gameObject.transform.position}\n"+
             $"LocalPosition: {this.gameObject.transform.localPosition}";
-    }
+    }*/
 }
